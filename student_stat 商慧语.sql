@@ -5,7 +5,8 @@ create table student_stat (
 
 create procedure calc_student_stat
 -- TODO:
-
+begin
+create table student_stat as 
 select
 	t1.name
 	,t3.teacher
@@ -40,3 +41,4 @@ left join
 	group by 
 		subject_id) t5
 	on t2.subject_id = t5.subject_id
+end;
